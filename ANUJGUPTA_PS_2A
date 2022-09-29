@@ -1,0 +1,599 @@
+PROBLEM SOLVING :
+
+                                                                 DAY 1
+
+Q1.
+
+#include<stdio.h>
+void main()
+{
+    int bs, a,ns;
+    char gr;
+    scanf("%d\n",&bs);
+    scanf("%c",&gr);
+    if(gr=='A')
+    {
+        a=1700;
+    }
+    else if(gr=='B')
+    {
+        a=1500;
+    }
+    else if(gr=='C')
+    {
+        a=1300;
+    }
+    ns=bs+(0.2*bs)+(0.5*bs)+a-(0.11*bs);
+    printf("%d",ns);
+
+}
+
+
+Q2.
+
+#include <stdio.h> 
+
+int main() 
+{ 
+    int A, B, C; 
+
+    printf("Enter the numbers A, B and C: "); 
+
+    scanf("%d %d %d", &A, &B, &C); 
+
+    if (A > B && A > C) 
+
+        printf("%d is the largest number.", A); 
+
+    if (B > A && B > C) 
+
+        printf("%d is the largest number.", B); 
+        
+     else
+        printf("%d is the largest number.", C); 
+
+}
+
+Q3.
+
+
+#include <stdio.h>
+
+void main()
+{
+    char c;
+    printf("Enter a Character: ");
+    scanf("%c", &c);
+    
+    if(c == 'a' || c == 'e' || c =='i' || c=='o' || c=='u' || c=='A'
+          || c=='E' || c=='I' || c=='O' || c=='U')
+{
+        printf("%c is a Vowel\n", c);
+    } 
+else 
+{
+        printf("%c is a Consonant\n", c);
+    }
+    
+}
+
+
+Q4.
+
+
+#include <stdio.h>
+
+void main(){
+
+   int y; 
+
+   printf("Enter the year to check: ");
+
+   scanf("%d",&y);
+
+   if (((y % 4 == 0) && (y % 100!= 0)) || (y%400 == 0))
+
+      printf("It is a leap year");
+
+   else
+
+      printf("It is not a leap year");
+
+
+}
+
+
+Q5.
+
+#include <stdio.h>
+
+int main(int argv, char** arv) {
+    int month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    char* day[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};   
+    int d, m, y, i; 
+
+    printf("Fill in a date after 01-01-1900 as dd-mm-yyyy: ");
+    scanf("%d-%d-%d",  &d, &m, &y);
+
+    // correction for leap year
+    if (y % 4 == 0 && (y % 100 != 0 || y % 400 == 0))
+        month[1] = 29;
+
+    if (y < 1900 || m < 1 || m > 12 || d < 1 || d > month[m - 1]) {
+        printf("This is an invalid date.\n");
+        return 1;
+    }
+
+    for (i = 1900; i < y; i++)
+        if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0))
+            d += 366;
+        else
+            d += 365;
+
+    for (i = 0; i < m - 1; i++) 
+        d += month[i];
+
+    printf("This is a %s.\n", day[d % 7]);
+    return 0;
+}
+  
+
+Q6.
+
+
+#include<stdio.h>
+void main ()
+{
+    int a,b,c;
+
+    printf("enter the sides of the triangle");
+
+    printf("side a =");
+
+    scanf("%d",&a);
+
+    printf("side b =");
+
+    scanf("%d",&b);
+
+    printf("side c =");
+
+    scanf("%d",&c);
+
+    if(a==b&&b==c&&c==a)
+
+        printf("equilateral triangle");
+
+    else if((a==b)||(b==c)||(c==a))
+
+            printf("isoscoles triangle");
+
+    else
+
+    printf("scalene triangle");
+}
+
+
+Q7.
+
+
+#include<stdio.h>
+void main ()
+{
+    float f,c;
+    printf("enter the temperature in faranite");
+    scanf("%f",&f);
+    c=5*(f-32)/9 ;
+    printf("temperature in celcius is %f\n",c);
+    if (c<0)
+        printf("freezing weather");
+    else if (c>=0&&c<=9)
+        printf("very cold weather");
+    else if (c>=10&&c<=19)
+        printf("cold weather");
+    else if(c>=20&&c<=29)
+        printf("normal in temperature");
+    else if (c>=30&&c<=39)
+        printf("its hot");
+    else
+            printf("its very hot");
+}
+
+
+
+
+Q8.
+
+
+#include<stdio.h>
+
+void main()
+{
+    int a,b;
+
+    printf("enter the coordinate of x axis and y axis   "   );
+
+    scanf("%d %d",&a,&b);
+
+    if(a>0&&b>0)
+
+        printf("point lies in first quadrant");
+
+    else if(a<0&&b>0)
+
+        printf("point lies in second quadrant");
+
+    else if(a<0&&b<0)
+
+        printf("point lies in third quadrant");
+
+    else if(a>0&&b<0)
+
+        printf("point lies in forth quadrant");
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                 DAY-2
+
+
+Q1.
+
+#include<stdio.h>
+void main()
+{
+    int i,j,a;
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            a=i+j-1;
+            printf("%d",a);
+        }
+        printf("\n");
+    }
+}
+
+
+Q2.
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,a;
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            a=i+j-1;
+            printf("%d",a);
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+
+
+Q3.
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,a=65;
+        printf("enter no of rows");
+        scanf("%d",&n); //for n=3
+     for(i=1;i<=n;i++)
+     {
+         for(j=1;j<=i;j++)
+         {
+            printf("%c",a);
+
+     }
+a++;
+
+     printf("\n");
+     }
+
+}
+
+
+Q4.
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,a=65;
+        printf("enter no of rows");
+        scanf("%d",&n); // for n = 4
+     for(i=1;i<=n;i++)
+     {
+         for(j=1;j<=i;j++)
+         {
+            printf("%c",a+j-1);
+
+     }
+a++;
+     printf("\n");
+     }
+
+}
+
+
+Q5.
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,a=69;
+        printf("enter no of rows");
+        scanf("%d",&n); // for n=5
+     for(i=1;i<=n;i++)
+     {
+         for(j=1;j<=i;j++)
+         {
+
+            printf("%c",a+j-1);
+         }
+
+          printf("\n");
+               a--;
+
+
+     }
+
+
+
+}
+
+Q6.
+
+
+#include<stdio.h>
+void main(){
+    for(int i=1;i<=4;i++){
+        int k=i;
+        for(int j=4-i;j>0;j--){
+            printf(" ");
+        }
+        for (int l = 0; l < i; l++)
+        {
+            printf("%d",k);
+            k++;
+        }
+        k=k-2;
+        while(k>=i){
+            printf("%d",k);
+            k--;
+        }
+        printf("\n");
+
+    }
+}
+
+
+
+
+Q7.
+
+
+#include<stdio.h>
+void main(){
+    for(int i=1;i<=4;i++){
+        int k=i;
+        for(int j=4-i;j>0;j--){
+            printf(" ");
+        }
+        while (k>0)
+        {
+            printf("%d",k);
+            k--;
+        }
+        k=k+2;
+        while(k<=i){
+            printf("%d",k);
+            k++;
+        }
+        printf("\n");
+
+    }
+}
+
+
+
+
+Q8.
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,k,a=0;
+        printf("enter no of rows");
+        scanf("%d",&n); //for n=4
+     for(i=1;i<=n;i++)
+     {
+    for(j=1;j<=n-i;j++)
+    {
+
+            printf(" ");
+    }
+        for(k=1;k<=((2*i)-1) ;k++)
+{
+           printf("*");
+
+    }
+    printf("\n");
+
+     }
+
+
+
+}
+
+
+Q9.
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,k;
+        printf("enter no of rows");
+        scanf("%d",&n); // for n=5
+     for(i=0;i<=n/2;i++)
+     {
+         for(j=0;j<(n/2)-i;j++)
+         {
+             printf(" ");
+         }
+         for(k=0;k<(2*i)+1;k++)
+         {
+             printf("*");
+         }
+         printf("\n");
+     }
+     for(i=(n/2)-1;i>=0;i--)
+     {
+         for(j=0;j<(n/2)-i;j++)
+         {
+             printf(" ");
+         }
+         for(k=0;k<(2*i)+1;k++)
+         {
+             printf("*");
+         }
+         printf("\n");
+
+
+
+}
+}
+
+
+
+Q10.
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n,k;
+        printf("enter no of rows");
+        scanf("%d",&n); // for n=5
+
+     for(i=(n/2);i>=0;i--)
+     {
+         for(j=0;j<(n/2)-i;j++)
+         {
+             printf(" ");
+         }
+         for(k=0;k<(2*i)+1;k++)
+         {
+             printf("*");
+         }
+         printf("\n");
+
+
+
+}
+
+for(i=1;i<=n/2;i++)
+     {
+         for(j=0;j<(n/2)-i;j++)
+         {
+             printf(" ");
+         }
+         for(k=0;k<(2*i)+1;k++)
+         {
+             printf("*");
+         }
+         printf("\n");
+     }
+}
+
+
+
+
+Q11.
+
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    int a=n-1;
+    for(int i=1;i<=n;i++){
+        int k=1;
+        while (k<=i)
+        {
+            printf("%d",k);
+            k++;
+        }
+        k=k-1;
+        for(int j=1;j<=((2*a));j++){
+            printf(" ");
+            
+        }
+        while (k>=1){
+            printf("%d",k);
+            k--;
+        }
+        printf("\n");
+        a--;
+        
+    }
+}
+
+
+
+
+Q12.
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    int a=0;
+    for(int i=n;i>=1;i--){
+        int k=1;
+        while (k<=i)
+        {           
+            printf("%d",k);
+            k++;
+        }
+        if(i==n){
+        k=k-2;
+        }
+        else{
+            k=k-1;
+        }
+        for(int j=1;j<=((2*a)-1);j++){
+            printf(" ");
+        }
+        while (k>=1)
+        {
+            printf("%d",k);
+            k--;
+        }
+        
+        printf("\n");
+        a++;
+
+
+    }
+}
+
+
+
+
+
+
+
+
