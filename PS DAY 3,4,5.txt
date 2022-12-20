@@ -1,7 +1,7 @@
                                                                                                                                                        
 
 
-                                                                                                                                                 DAY3
+                                                                                 DAY3
 Q1.
 
 
@@ -321,7 +321,7 @@ void main()
 }
 
 
-                                                                                                                                                                    DAY 4
+                                                                               DAY 4
 
 Q1. 
 
@@ -707,7 +707,7 @@ int catmouse(int a,int b,int c)
 }
 
 
-                                                                                                                                                              DAY 5
+                                                                             DAY 5
 
 
 
